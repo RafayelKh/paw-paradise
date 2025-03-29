@@ -1,4 +1,3 @@
-import { useRef } from 'react'
 import './App.css'
 import Hero from './components/Hero'
 import Features from './components/Features'
@@ -9,8 +8,6 @@ import SmoothScroll from './components/SmoothScroll'
 import Cursor from './components/Cursor'
 
 function App() {
-  const containerRef = useRef<HTMLDivElement>(null)
-
   return (
     <div className="app">
       <Cursor />

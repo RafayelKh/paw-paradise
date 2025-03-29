@@ -23,8 +23,8 @@ const Navbar = () => {
       const sections = document.querySelectorAll('section[id]');
       
       sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
+        const sectionTop = (section as HTMLElement).offsetTop;
+        const sectionHeight = (section as HTMLElement).offsetHeight;
         const scrollY = window.scrollY;
         
         if (scrollY >= sectionTop - 100 && scrollY < sectionTop + sectionHeight - 100) {

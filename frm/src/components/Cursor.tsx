@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 
 const Cursor = () => {
@@ -15,8 +15,6 @@ const Cursor = () => {
   const cursorXSpring = useSpring(cursorX, springConfig);
   const cursorYSpring = useSpring(cursorY, springConfig);
 
-  const shapeRef = useRef<HTMLDivElement>(null);
-  
   const checkIfScrollable = (element: Element): [boolean, 'horizontal' | 'vertical' | null] => {
     if (!element) return [false, null];
     
